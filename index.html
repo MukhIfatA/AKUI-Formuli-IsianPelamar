@@ -1,0 +1,1550 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulir</title>
+  <link rel="stylesheet" href="">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <style>
+    li {
+      margin-bottom: 20px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Include Select2 CSS -->
+  <link rel="icon" href="logo2.svg">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+</head>
+
+<body>
+  <section class="d-flex justify-content-center">
+    <div class="card m-3d-flex md" style="width: 500px;">
+
+      <div class="card-body border-top border-5 border-warning">
+        <h5 class="card-title text-center p-3">Form Isian Pelamar PT Akui Bird Nest Indonesia</h5>
+        <div class="container text-center fs-5">
+          <p class="card-text">Silakan memasukkan data diri Anda dengan sebenar-benarnya.
+            Baca dengan teliti dan isikan form pendaftaran ini dengan benar sesuai instruksi pada masing-masing
+            pertanyaan.
+            Seluruh proses rekrutmen yang diadakan oleh perusahaan tidak dipungut biaya apapun.
+          </p>
+        </div>
+      </div>
+
+
+      <form action="" method="post">
+        <div class="card m-3  md">
+          <div class="card-body border-top border-5 border-warning">
+            <h5 class="card-title text-start"><label class="form-label " for="yourInput">NIK</label><input type="number"
+                class="form-control" id="yourInput"></h5>
+            <form>
+
+
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama lengkap sesuai KTP</label>
+                <input class="form-control" id="nama" aria-describedby="emailHelp" readonly>
+
+              </div>
+
+              <div class="mb-3">
+                <label for="" class="form-label">Tanggal Lamaran</label>
+                <input class="form-control" readonly id="tanggal_Lamaran">
+
+              </div>
+              <div class="mb-3">
+                <label for="scan-ktp" class="form-label fs">
+                  <p>Jabatan Pelamar Untuk
+                  </p>
+                </label>
+                <input name="Jabatan Pelamar Untuk" class="form-control" type="text" readonly id="jbtnplmr">
+              </div>
+
+              <div class="mb-3">
+                <label for="Kewarganegaraan" class="form-label">Kewarganegaraan</label>
+                <input name="Kewarganegaraan" readonly required type="text" class="form-control" id="Kewarganegaraan"
+                  aria-describedby="emailHelp">
+
+              </div>
+              <div class="mb-3">
+                <p class="form-label">Suami/Istri</p>
+                <!-- <input name="hubungan" required type="text" class="form-control" id="hubungan"> -->
+                <div class="p-3">
+                  <label for="namaPasangan">Nama Suami/Istri</label>
+                  <input type="text" class="form-control" id="namaPasangan">
+                  <label for="jenisKPasangan">Jenis kelamin </label>
+                  <select type="text" class="form-control" id="jenisKPasangan">
+                    <option value="-"></option>
+                    <option value="Laki-laki">Pria</option>
+                    <option value="Perempuan">Wanita</option>
+                  </select>
+                  <div class="row">
+                    <div class="col-6">
+                      <label for="tgllahirPasangan">Tanggal lahir</label>
+                      <input type="date" class="form-control" id="tgllahirPasangan">
+                    </div>
+                    <div class="col-6"><label for="tmptlahirPasangan">Tempat lahir</label>
+                      <input type="text" class="form-control" id="tmptlahirPasangan">
+                    </div>
+                  </div>
+                  <label for="pendidikan_pasangan">Pendidikan </label>
+                  <select type="text" class="form-control" id="pendidikan_pasangan">
+                    <option value=""></option>
+                    <option value="smp">SMP Sederajat</option>
+                    <option value="SMA">SMA</option>
+                    <option value="SMK">SMK</option>
+                    <option value="D1">D1</option>
+                    <option value="D2">D2</option>
+                    <option value="D3">D3</option>
+                    <option value="D4">D4</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+
+                  </select>
+                  <label for="pekerjaan_pasangan">Pekerjaan</label>
+                  <input type="text" class="form-control" id="pekerjaan_pasangan">
+                </div>
+              </div>
+              <div id="anak">
+                <div class="container" id="anakForm">
+                  <p id="anakke">Anak </p>
+                  <div class="p-3">
+                    <label for="namaAnak">Nama Anak</label>
+                    <input type="hidden" class="anak1 nik" id="nik">
+                    <input type="text" class="form-control anak1" id="namaAnak">
+                    <label for="jeniskelaminAnak">Jenis kelamin </label>
+                    <select type="text" class="form-control anak1">
+                      <option value="-"></option>
+                      <option value="Laki-laki">Pria</option>
+                      <option value="Perempuan">Wanita</option>
+                    </select>
+                    <div class="row">
+                      <div class="col-6">
+                        <label for="tgllahirAnak">Tanggal lahir</label>
+                        <input type="date" class="form-control  anak1" id="tgllahirAnak">
+                      </div>
+                      <div class="col-6"><label for="tgllahirAnak">Tempat lahir</label>
+                        <input type="text" class="form-control  anak1" id="tgllahirAnak">
+                      </div>
+                    </div>
+                    <label for="pendidikanAnak">Pendidikan </label>
+                    <select type="text" class="form-control anak1" id="pendidikanAnak">
+                      <option value="Belum Sekolah">Belum Sekolah</option>
+                      <option value="SD">SD</option>
+                      <option value="SMP">SMP Sederajat</option>
+                      <option value="SMA">SMA</option>
+                      <option value="SMK">SMK</option>
+                      <option value="D1">D1</option>
+                      <option value="D2">D2</option>
+                      <option value="D3">D3</option>
+                      <option value="D4">D4</option>
+                      <option value="S1">S1</option>
+                      <option value="S2">S2</option>
+
+                    </select>
+
+                    <label for="pekerjaanAnak">Pekerjaan</label>
+                    <input type="text" class="form-control anak1" id="pekerjaanAnak">
+                  </div>
+
+                </div> <button type="button" class="btn btn-success m-3" id="btn1"><ion-icon
+                    name="add-outline"></ion-icon>Tambah</button>
+              </div>
+              <div class="ayahdanIbu">
+                <p>Ayah</p>
+                <div class="container p-3">
+
+                  <label for="Nama">Nama</label>
+                  <input class="form-control" type="text" id="namaAyah">
+                  <label for="jk">Jenis Kelamin</label>
+                  <select name="" id="jkAyah" class="form-control">
+                    <option value="Pria">Pria</option>
+                    <option value="Wanita">Wanita</option>
+                  </select>
+                  <div class="row">
+                    <div class="col-6">
+                      <label for="tgllahirAyah">Tanggal lahir</label>
+                      <input type="date" class="form-control  " id="tgllahirAyah">
+                    </div>
+                    <div class="col-6"><label for="tmptlahirAyah">Tempat lahir</label>
+                      <input type="text" class="form-control  " id="tmptlahirAyah">
+                    </div>
+                  </div>
+
+                  <label for="pendidikanayah">Pendidikan </label>
+                  <select type="text" class="form-control" id="pendidikanayah">
+                    <option value=""></option>
+                    <option value="smp">SMP Sederajat</option>
+                    <option value="SMA">SMA</option>
+                    <option value="SMK">SMK</option>
+                    <option value="D1">D1</option>
+                    <option value="D2">D2</option>
+                    <option value="D3">D3</option>
+                    <option value="D4">D4</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                  </select>
+                  <label for="pekerjaanayah">Pekerjaan</label>
+                  <input type="text" class="form-control" id="pekerjaanayah">
+                </div>
+                <p>ibu</p>
+                <div class="container p-3"><input type="hidden" class="nikIbu nik" id="" value="">
+                  <label class="form-label" for="NamaIbu">Nama</label>
+                  <input class="form-control" type="text" id="NamaIbu">
+                  <label class="form-label" for="jkIbu">Jenis Kelamin</label>
+                  <select class="form-control" type="text" id="jkIbu">
+                    <option value="Wanita">Wanita</option>
+                    <option value="Pria">Pria</option>
+                  </select>
+                  <div class="row">
+                    <div class="col-6">
+                      <label for="tgllahirIbu">Tanggal lahir</label>
+                      <input type="date" class="form-control  " id="tgllahirIbu">
+                    </div>
+                    <div class="col-6"><label for="tmptlahirIbu">Tempat lahir</label>
+                      <input type="text" class="form-control  " id="tmptlahirIbu">
+                    </div>
+                  </div>
+                  <label class="form-label" for="pendidikanIbu">Pendidikan </label>
+                  <select type="text" class="form-control" id="pendidikanIbu">
+                    <option value=""></option>
+                    <option value="smp">SMP Sederajat</option>
+                    <option value="SMA">SMA</option>
+                    <option value="SMK">SMK</option>
+                    <option value="D1">D1</option>
+                    <option value="D2">D2</option>
+                    <option value="D3">D3</option>
+                    <option value="D4">D4</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                  </select>
+                  <label class="form-label" for="pekerjaanIbu">Pekerjaan</label>
+                  <input type="text" class="form-control" id="pekerjaanIbu">
+                </div>
+                <div id="saudaraKandung">
+                  <div class="container" id="saudaraKandungForm">
+                    <p id="saudaraKandung">Saudara Kandung </p>
+                    <div class="p-3">
+                      <input type="hidden" class="saudara1 nik" id="" value="">
+                      <label for="namasaudaraKandung">Nama Saudara Kandung</label>
+                      <input type="text" class="form-control saudara1" id="namasaudaraKandung">
+                      <label for="jeniskelaminsaudaraKandung">Jenis kelamin </label>
+                      <select type="text" class="form-control saudara1" id="">
+                        <option value=""></option>
+                        <option value="Pria">Pria</option>
+                        <option value="Wanita">Wanita</option>
+                      </select>
+
+                      <!-- <label for="tgllahirsaudaraKandung">Tanggal/Tempat lahir</label> -->
+                      <div class="row">
+                        <div class="col-6">
+                          <label for="tgllahirSaudara">Tanggal lahir</label>
+                          <input type="date" class="form-control saudara1" id="tgllahirSaudara">
+                        </div>
+                        <div class="col-6"><label for="tgllahirSaudara">Tempat lahir</label>
+                          <input type="text" class="form-control saudara1" id="tgllahirSaudara">
+                        </div>
+                      </div>
+                      <label for="pendidikansaudaraKandung">Pendidikan </label>
+                      <select type="text" class="form-control saudara1" id="pendidikansaudaraKandung">
+                        <option value=""></option>
+                        <option value="smp">SMP Sederajat</option>
+                        <option value="SMA">SMA</option>
+                        <option value="SMK">SMK</option>
+                        <option value="D1">D1</option>
+                        <option value="D2">D2</option>
+                        <option value="D3">D3</option>
+                        <option value="D4">D4</option>
+                        <option value="S1">S1</option>
+                        <option value="S2">S2</option>
+                      </select>
+                      <label for="pekerjaanSaudaraKandung">Pekerjaan</label>
+                      <input type="text" class="form-control saudara1" id="pekerjaanSaudaraKandung">
+                    </div>
+
+                  </div> <button type="button" class="btn btn-success m-3" id="btn2"><ion-icon
+                      name="add-outline"></ion-icon>Tambah</button>
+                </div>
+                <div id="">
+                  <p>Pendidikan Formal</p>
+                  <div class="container" id="pendidikanFormal">
+                    <!-- <p id="">Saudara Kandung </p> -->
+                    <div class="p-3">
+                      <input type="hidden" class="formal1 nik" id="" value="">
+                      <!-- <input type="hidden" name="" id="nik" class="formal1"> -->
+                      <label for="">Jenis Sekolah</label>
+                      <input type="text" class="form-control formal1" id="jenisPnddkan">
+                      <label for="">Nama Sekolah</label>
+                      <input type="text" class="form-control formal1" id="namaPnddkan">
+                      <label for="">Lokasi</label>
+                      <input type="text" class="form-control formal1" id="lokasiPnddkan">
+                      <label for="">Fakultas/jurusan</label>
+                      <input type="text" class="form-control formal1" id="jurusanPnddkan" value="-">
+                      <label for="">Tahun Masuk</label>
+                      <input type="number" class="form-control formal1" id="waktuDripnddkan">
+                      <label for="Sampai">Tahun Keluar</label>
+                      <input type="number" class="form-control formal1" id="sampaiDripnddkan">
+                      <br>
+                      <select name="" id="sk" class="form-control formal1">
+                        <option value="">Status Kelulusan</option>
+                        <option value="Lulus">Lulus</option>
+                        <option value="Tidak Lulus">Tidak</option>
+                      </select>
+                      <label for="nilai">Nilai/Ipk</label>
+                      <input class="form-control formal1" type="number" name="" id="nilai">
+                      <label for="gelar">Gelar</label>
+                      <input class="form-control formal1" type="text" name="" Value="-" id="gelar">
+                    </div>
+
+                  </div> <button type="button" class="btn btn-success m-3" id="btn3"><ion-icon
+                      name="add-outline"></ion-icon>Tambah</button>
+                </div>
+                <div id="">
+                  <p>Pendidikan Non Formal / Pelatihan</p>
+                  <div class="container" id="pendidikanNonFormal">
+                    <!-- <p id="">Saudara Kandung </p> -->
+                    <div class="p-3">
+                      <input type="hidden" name="" id="" class="non-formal1 nik">
+                      <label for="">Jenis Sekolah</label>
+                      <input type="text" class="form-control non-formal1" id="jenis_pelatihan">
+                      <label for="">Nama Sekolah</label>
+                      <input type="text" class="form-control non-formal1" id="nama_pelatihan">
+                      <label for="">Lokasi</label>
+                      <input type="text" class="form-control non-formal1" id="lokasi_pelatihan">
+
+                      <label for="">Tahun Dari</label>
+                      <input type="number" class="form-control non-formal1" id="waktu_pelatihan">
+                      <label for="Sampai">Tahun Selesai</label>
+                      <input type="number" class="form-control non-formal1" id="sampai_pelatihan">
+
+
+                      <label for="sertifikat">Sertifikat(Iya / tidak)</label>
+                      <select class="form-control non-formal1" type="text" name="" id="sertifikat">
+                        <option value=""></option>
+                        <option value="Ya">Ya</option>
+                        <option value="Tidak">Tidak</option>
+                      </select>
+                    </div>
+
+                  </div> <button type="button" class="btn btn-success m-3" id="btn4"><ion-icon
+                      name="add-outline"></ion-icon>Tambah</button>
+                </div>
+                <p>Penguasaan Bahasa</p>
+                <div class="table-responsive" id="penguasaan">
+
+
+
+                  <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input type="hidden" name="" id="" class="bahasa1 nik">
+                          <label for="Bahasa">Bahasa</label>
+                          <input type="text" style="
+                                  display: block;
+                                  /* width: 100%; */
+                                  padding: 0.375rem 0.75rem;
+                                  font-size: 1rem;
+                                  font-weight: 400;
+                                  line-height: 1.5;
+                                  color: #212529;
+                                  background-color: #fff;
+                                  background-clip: padding-box;
+                                  border: 1px solid #ced4da;
+                                  -webkit-appearance: none;
+                                  -moz-appearance: none;
+                                  appearance: none;
+                                  border-radius: 0.375rem;
+                                  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;" id="Bahasa"
+                            class="bahasa1">
+                        </td>
+                        <td>
+                          <label for="Writing">Writing</label>
+                          <select class="form-control bahasa1" style="width:auto;" name="" id="Writing">
+                            <option value="kurang">kurang</option>
+                            <option value="Cukup">Cukup</option>
+                            <option value="Baik">Baik</option>
+                            <!-- <option value="e">e</option> -->
+                          </select>
+                        </td>
+                        <td>
+                          <label for="Understanding">Understanding</label>
+                          <select class="form-control bahasa1" name="" id="Understanding">
+                            <option value="kurang">kurang</option>
+                            <option value="Cukup">Cukup</option>
+                            <option value="Baik">Baik</option>
+                          </select>
+                        </td>
+                        <td>
+                          <label for="Speaking">Speaking</label>
+                          <select class="form-control bahasa1" style="width:auto;" name="" id="Speaking">
+                            <option value="kurang">kurang</option>
+                            <option value="Cukup">Cukup</option>
+                            <option value="Baik">Baik</option>
+                          </select>
+                        </td>
+                        <td>
+                          <label for="Reading">Reading</label>
+                          <select class="form-control bahasa1" style="width:auto;" name="" id="Reading">
+                            <option value="kurang">kurang</option>
+                            <option value="Cukup">Cukup</option>
+                            <option value="Baik">Baik</option>
+                          </select>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+
+
+              </div> <button type="button" class="btn btn-success m-3" id="btn5"><ion-icon
+                  name="add-outline"></ion-icon>Tambah</button>
+              <div class="" id="organ">
+                <p>pengalaman-organisasi</p>
+                <div class="form-group">
+                  <input type="hidden" name="" id="" class="organisasi1 nik">
+                  <label for="organisasi">Nama Organisasi:</label>
+                  <input type="text" id="organisasi" name="organisasi" class="form-control organisasi1" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="tahun">Tahun:</label>
+                  <input type="number" id="tahun" name="tahun" class="form-control organisasi1" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="lokasi">Lokasi:</label>
+                  <input type="text" id="lokasi" name="lokasi" class="form-control organisasi1" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="jabatan">Jabatan:</label>
+                  <input type="text" id="jabatan" name="jabatan" class="form-control organisasi1" required>
+                </div>
+              </div>
+              <button type="button" class="btn btn-success m-3" id="btn7"><ion-icon
+                  name="add-outline"></ion-icon>Tambah</button>
+              <div class="Pengalaman-kerja mt-5">
+                <p>Pengalaman Kerja</p>
+                <div class="p-3">
+                  <label for="">Nama perusahaan</label>
+                  <input type="text" class="form-control" id="namaPerusahaan">
+                  <label for="">Alamat/addres</label>
+                  <input type="text" class="form-control" id="alamatPerusahaan">
+                  <label for="">Kota/city</label>
+                  <input type="text" class="form-control" id="kotaPerusahaan">
+                  <label for="">Nomor Telepon Kantor</label>
+                  <input type="number" class="form-control" id="telpPerusahaan">
+                  <label for="">Jabatan Terakhir</label>
+                  <input type="text" class="form-control" id="jbtnPerusahaan">
+
+                  <label for="">Nama atasan</label>
+                  <input type="text" class="form-control" id="atasanPerusahaan">
+                  <label for="">Nomor Telepon atasan</label>
+                  <input type="number" class="form-control" id="telpAtasan">
+                  <label for="">Dari</label>
+                  <input type="date" class="form-control" id="dariPerusahaan">
+                  <label for="">Sampai</label>
+                  <input type="date" class="form-control" id="sampaiPerusahaan">
+                  <label for="">Gaji Terakhir</label>
+                  <input type="number" class="form-control" id="lastPerusahaan">
+                  <label for="">Alasan Keluar</label>
+                  <textarea class="form-control" name="" id="alasan_keluar" cols="20" rows="4"></textarea>
+                  <p class="mt-2" for="">Tuliskan Pekerjaan yang anda lakukan,tugas-tugas,Keahlian-keahlian, kesempatan
+                    promosi selama bekerja di perusahaan</p>
+                  <textarea class="form-control" name="" id="jobDesc" cols="20" rows="4"></textarea>
+                  <label for="">Berikan penjelasan singkat mengapa Anda tertarik melamar di perusahaan ini</label>
+                  <input type="text" class="form-control" id="pnjlsn">
+                  <label for="">Apakah Anda mempunyai keluarga atau kawan yang bekerja dalam group perusahaan kami?
+                    Apabila iya, Cantumkan nama dan jabatannya!</label>
+                  <input type="text" class="form-control" id="relasi">
+                </div>
+              </div>
+              <div class="">
+                <p>Lain-Lain</p>
+                sebutkan referennsi yang dapat dihubungi. Orang tua atau keluarga
+                <strong>MINIMAL 2!</strong>
+                <div class="container" id="lainlain">
+                  <input type="hidden" name="" id="" class="lainlain1 nik">
+                  <label for="">Nama</label>
+                  <input type="text" class="form-control lainlain1" id="namaL">
+                  <label for="">Nomor Telepon</label>
+                  <input type="number" class="form-control lainlain1" id="telpL">
+                  <label for="">Hubungan</label>
+                  <input type="text" class="form-control lainlain1" id="hubL">
+                  <!-- <label for="">Alamat/addres</label>
+                          <input type="text"class="form-control"> -->
+                </div>
+                <button type="button" class="btn btn-success m-3" id="btn6"><ion-icon
+                    name="add-outline"></ion-icon>Tambah</button>
+              </div>
+          </div>
+          <button type="button" class="btn btn-warning text-light" onclick="submitForm()" id="submit">Submit</button>
+
+          <input type="hidden" class="anak1" value="anak">
+          <input type="hidden" class="saudara1" value="saudara">
+
+      </form>
+    </div>
+    </div>
+    </div>
+    </form>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <style>
+    .yl {
+      outline: none;
+      border: none;
+      border-bottom: silver 2px solid;
+    }
+
+    li {
+      margin-bottom: 0 !important;
+    }
+  </style>
+  <!-- Include SweetAlert library -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    //
+
+    // Accessing the properties
+    // console.log("Name:", person.nama);
+    // console.log("NIK:", person.nik);
+    // console.log("Nationality:", person.kewarganegaraan);
+
+    $(document).ready(function () {
+      let nik;
+
+      $("#yourInput").on("change", function () {
+        // Get the input value
+
+        var inputValue = $(this).val();
+
+        // Make an Ajax request with the input value
+        $.ajax({
+          url: "api/api_cek.php",
+          method: "GET",
+          dataType: "json",
+          data: { nik: inputValue }, // Pass the input value as a parameter
+          success: function (data) {
+            // Handle the response from the server
+            // console.log(data);
+            if (data.status === "error") {
+              Swal.fire({
+                title: "Error!",
+                text: data.message,
+                icon: "error",
+              });
+              return; // Exit the function if there's an error
+            }
+
+            localStorage.setItem("key", JSON.stringify(data));
+            Swal.fire({
+              title: "Success!",
+              text: "Selamat mengisi",
+              icon: "success",
+            });
+            var storedData = localStorage.getItem("key");
+            var data = JSON.parse(storedData);
+            console.log(data.data.nama);
+            nik = data.data.nik;
+            $(".nik").val(nik);
+            var jabatanId = data.data.jabatan_id;
+            if ((jabatanId = 1)) {
+              $("#jbtnplmr").val("Operator Produksi");
+            }
+            $("#nama").val(data.data.nama);
+            $("#tanggal_Lamaran").val(data.data.updated_at);
+            $("#Kewarganegaraan").val(data.data.kewarganegaraan);
+            $("#yourInput").prop("readonly", true);
+
+          },
+          // You can optionally handle additional logic for other cases here
+          error: function (xhr, status, error) {
+            console.error(xhr.responseText);
+            console.log(xhr);
+            Swal.fire({
+              title: "Error!",
+              text: xhr.responseText,
+              icon: "error",
+              confirmButtonText: "OK",
+            });
+          },
+        });
+      });
+      const lokalis = JSON.parse(localStorage.getItem("key"));
+
+      //localStorage.clear();
+      // Target the input field by its ID
+      var i = 2;
+      let l = 2;
+      let mbeldos1 = 2;
+      let c = 2;
+      let UlatBom = 2;
+      let pisangKeju = 2;
+      let mbeldos = 2;
+      $("#btn1").click(function () {
+        // Check if the counter is less than or equal to 5 before allowing appending
+        if (i <= 5) {
+          // Create a new div element
+          var newFormDiv = $("<div>").addClass("p-3");
+
+          // Add input fields and labels to the new div
+          newFormDiv.append(`<input type="hidden" class="anak${i} nik" id="" value="${nik}"><label for="namaAnak">Nama Anak ${i} </label>
+          <input type="text" class="form-control anak${i}" id="namaAnak">
+          <label for="jeniskelaminAnak">Jenis kelamin </label>
+          <select type="text" class="form-control anak${i}" id="jenisK_suami/istri">
+            <option value="-"></option>
+            <option value="Laki-laki">Pria</option>
+            <option value="Perempuan">Wanita</option>
+          </select>
+          <div class="row">
+          <div class="col-6">
+          <label for="tgllahirAnak">Tanggal lahir</label>
+          <input type="date" class="form-control  anak${i}" id="tgllahirAnak">
+        </div>
+        <div class="col-6"><label for="tgllahirAnak">Tempat lahir</label>
+          <input type="text" class="form-control  anak${i}" id="tgllahirAnak"></div></div>
+          <label for="pendidikanAnak">Pendidikan </label>
+          <select type="text" class="form-control  anak${i}" id="pendidikanAnak">
+          <option value="Belum Sekolah">Belum Sekolah</option>
+          <option value="SD">SD</option>
+          <option value="SMP">SMP Sederajat</option>
+          <option value="SMA">SMA</option>
+          <option value="SMK">SMK</option>
+          <option value="D1">D1</option>
+          <option value="D2">D2</option>
+          <option value="D3">D3</option>
+          <option value="D4">D4</option>
+          <option value="S1">S1</option>
+          <option value="S2">S2</option>
+
+          </select>
+
+          <label for="pekerjaanAnak">Pekerjaan</label>
+          <input type="text" class="form-control anak${i}" id="pekerjaanAnak">
+          <input type="hidden" class="anak${i}" value="anak">
+          `);
+
+          // Append the new div to the anakForm container
+          $("#anakForm").append(newFormDiv);
+
+          // Increment the counter
+          i++;
+        } else {
+          Swal.fire({
+            title: "Error!",
+            text: "Jumlah Maksimal 5",
+            icon: "error",
+            confirmButtonText: "OK",
+          });
+        }
+      });
+      $("#btn2").click(function () {
+        // Check if the counter is less than or equal to 5 before allowing appending
+        if (l <= 5) {
+          // Create a new div element
+          var newFormDiv = $("<div>").addClass("p-3");
+
+          // Add input fields and labels to the new div
+          newFormDiv.append(
+            `<input type="hidden" class="saudara${i}" id="" value="${nik}"><label for="namasaudaraKandung">Nama Saudara Kandung ${l}</label>
+              <input type="text" class="form-control saudara${l}" id="namasaudaraKandung">
+              <label for="jeniskelaminsaudaraKandung">Jenis kelamin </label>
+              <select type="text" class="form-control saudara${l}" id="">
+                <option value=""></option>
+                <option value="Pria">Pria</option>
+                <option value="Wanita">Wanita</option>
+              </select>
+             
+              <!-- <label for="tgllahirsaudaraKandung">Tanggal/Tempat lahir</label> -->
+              <div class="row">
+                <div class="col-6">
+                  <label for="tgllahirSaudara">Tanggal lahir</label>
+                  <input type="date" class="form-control saudara${l}" id="tgllahirSaudara">
+                </div>
+                <div class="col-6"><label for="tgllahirSaudara">Tempat lahir</label>
+                  <input type="text" class="form-control saudara${l}" id="tgllahirSaudara">
+                </div>
+              </div>
+              <label for="pendidikansaudaraKandung">Pendidikan </label>
+              <select type="text" class="form-control saudara${l}" id="pendidikansaudaraKandung">
+                <option value=""></option>
+                <option value="smp">SMP Sederajat</option>
+          <option value="SMA">SMA</option>
+          <option value="SMK">SMK</option>
+          <option value="D1">D1</option>
+          <option value="D2">D2</option>
+          <option value="D3">D3</option>
+          <option value="D4">D4</option>
+          <option value="S1">S1</option>
+          <option value="S2">S2</option>
+              </select>
+              <label for="pekerjaanSaudaraKandung">Pekerjaan</label>
+              <input type="text" class="form-control saudara${l}" id="pekerjaanSaudaraKandung">
+            </div> <input type="hidden" class="saudara${l}" value="saudara">`
+          );
+
+          // Append the new div to the anakForm container
+          $("#saudaraKandungForm").append(newFormDiv);
+
+          // Increment the counter
+          l++;
+        } else {
+          alert("Maximum limit of 5 forms reached.");
+        }
+      });
+
+      $("#btn3").click(function () {
+        // Check if the counter is less than or equal to 5 before allowing appending
+        if (mbeldos1 <= 5) {
+          // Create a new div element
+          var newFormDiv = $("<div>").addClass("p-3");
+
+          // Add input fields and labels to the new div
+          newFormDiv.append(` <input type="hidden" id="nik" class="formal${mbeldos1}" value="${nik}"><label for="">Jenis Sekolah${mbeldos1}</label>
+          <input type="text" class="form-control formal${mbeldos1}" id="jenisPnddkan">
+          <label for="">Nama Sekolah</label>
+          <input type="text" class="form-control formal${mbeldos1}" id="namaPnddkan">
+          <label for="">Lokasi</label>
+          <input type="text" class="form-control formal${mbeldos1}" id="lokasiPnddkan">
+          <label for="">Fakultas/jurusan</label>
+          <input type="text" class="form-control formal${mbeldos1}" id="jurusanPnddkan">
+          <label for="">Tahun Masuk </label>
+          <input type="number" class="form-control formal${mbeldos1}" id="waktuDripnddkan">
+          <label for="Sampai">Tahun Keluar</label>
+          <input type="number" class="form-control formal${mbeldos1}" id="sampaiDripnddkan">
+          <br>
+          <select name="" id="sk" class="form-control formal${mbeldos1}">
+            <option value="">Status Kelulusan</option>
+            <option value="Lulus">Lulus</option>
+            <option value="Tidakl">Tidak</option>
+          </select>
+          <label for="nilai">Nilai/Ipk</label>
+          <input class="form-control formal${mbeldos1}" type="text" name="" id="nilai">
+          <label for="gelar">Gelar</label>
+          <input class="form-control formal${mbeldos1}" type="text" name="" id="gelar">`);
+          // Append the new div to the anakForm container
+          $("#pendidikanFormal").append(newFormDiv);
+
+          // Increment the counter
+          mbeldos1++;
+        } else {
+          alert("Maximum limit of 5 forms reached.");
+        }
+      });
+      $("#btn4").click(function () {
+        // Check if the counter is less than or equal to 5 before allowing appending
+        if (c <= 5) {
+          // Create a new div element
+          var newFormDiv = $("<div>").addClass("p-3");
+
+          // Add input fields and labels to the new div
+          newFormDiv.append(
+            `<input type="hidden" name="" id="nik" class="non-formal${c}"value="${nik}> <label for="">Jenis Sekolah ${c}</label>
+              <input type="text" class="form-control non-formal${c}" id="jenis_pelatihan">
+              <label for="">Nama Sekolah</label>
+              <input type="text" class="form-control non-formal${c}" id="nama_pelatihan">
+              <label for="">Lokasi</label>
+              <input type="text" class="form-control non-formal${c}" id="lokasi_pelatihan">
+
+              <label for="">Tahun Masuk </label>
+              <input type="number" class="form-control non-formal${c}" id="waktu_pelatihan">
+              <label for="Sampai">Tahun Keluar</label>
+              <input type="number" class="form-control non-formal${c}" id="sampai_pelatihan">
+
+
+              <label for="sertifikat">Sertifikat(Iya / tidak)</label>
+              <select class="form-control non-formal${c}" type="text" name="" id="sertifikat">
+                <option value=""></option>
+                <option value="yes">Ya</option>
+                <option value="tidak">Tidak</option>
+              </select>
+`
+          );
+
+          // Append the new div to the anakForm container
+          $("#pendidikanNonFormal").append(newFormDiv);
+
+          // Increment the counter
+          c++;
+        } else {
+          alert("Maximum limit of 5 forms reached.");
+        }
+      });
+      $("#btn5").click(function () {
+        // Check if the counter is less than or equal to 5 before allowing appending
+        if (UlatBom <= 5) {
+          // Create a new div element
+          var newFormDiv = $("<div>");
+
+          // Add input fields and labels to the new div
+          newFormDiv.append(
+            `<table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <td>
+                  <input type="hidden" name=""  class="bahasa${UlatBom} nik"value="${nik}>
+                    <label for="Bahasa">Bahasa</label>
+                    <input type="text" style="
+                            display: block;
+                            /* width: 100%; */
+                            padding: 0.375rem 0.75rem;
+                            font-size: 1rem;
+                            font-weight: 400;
+                            line-height: 1.5;
+                            color: #212529;
+                            background-color: #fff;
+                            background-clip: padding-box;
+                            border: 1px solid #ced4da;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                            border-radius: 0.375rem;
+                            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;" id="Bahasa"class="bahasa${UlatBom}">
+                  </td>
+                  <td>
+                    <label for="Writing">Writing</label>
+                    <select class="form-control bahasa${UlatBom}" style="width:auto;" name="" id="Writing">
+                      <option value="kurang">kurang</option>
+                      <option value="Cukup">Cukup</option>
+                      <option value="Baik">Baik</option>
+                      <!-- <option value="e">e</option> -->
+                    </select>
+                  </td>
+                  <td>
+                    <label for="Understanding">Understanding</label>
+                    <select class="form-control bahasa${UlatBom}" name="" id="Understanding">
+                      <option value="kurang">kurang</option>
+                      <option value="Cukup">Cukup</option>
+                      <option value="Baik">Baik</option>
+                    </select>
+                  </td>
+                  <td>
+                    <label for="Speaking">Speaking</label>
+                    <select class="form-control bahasa${UlatBom}" style="width:auto;" name="" id="Speaking">
+                      <option value="kurang">kurang</option>
+                      <option value="Cukup">Cukup</option>
+                      <option value="Baik">Baik</option>
+                    </select>
+                  </td>
+                  <td>
+                    <label for="Reading">Reading</label>
+                    <select class="form-control bahasa${UlatBom}" style="width:auto;" name="" id="Reading">
+                      <option value="kurang">kurang</option>
+                      <option value="Cukup">Cukup</option>
+                      <option value="Baik">Baik</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>`
+          );
+
+          // Append the new div to the anakForm container
+          $("#penguasaan").append(newFormDiv);
+
+          // Increment the counter
+          UlatBom++;
+        } else {
+          alert("Maximum limit of 5 forms reached.");
+        }
+      });
+      $("#btn7").click(function () {
+        // Check if the counter is less than or equal to 5 before allowing appending
+        if (mbeldos <= 5) {
+          // Create a new div element
+          var newFormDiv = $("<div>").addClass("mt-3");
+
+          // Add input fields and labels to the new div
+          newFormDiv.append(
+            `  <input type="hidden" name="" id="nik" class="organisasi${mbeldos}" value="${nik}> <div class="form-group" >
+      <label for="organisasi">Nama Organisasi:</label>
+      <input type="text" id="organisasi" name="organisasi" class="form-control organisasi${mbeldos}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="tahun">Tahun:</label>
+      <input type="text" id="tahun" name="tahun" class="form-control organisasi${mbeldos}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="lokasi">Lokasi:</label>
+      <input type="text" id="lokasi" name="lokasi" class="form-control organisasi${mbeldos}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="jabatan">Jabatan:</label>
+      <input type="text" id="jabatan" name="jabatan" class="form-control organisasi${mbeldos}" required>
+    </div>`
+          );
+
+          // Append the new div to the anakForm container
+          $("#organ").append(newFormDiv);
+
+          // Increment the counter
+          mbeldos++;
+        } else {
+          alert("Maximum limit of 5 forms reached.");
+        }
+      });
+      $("#btn6").click(function () {
+        // Check if the counter is less than or equal to 5 before allowing appending
+        if (pisangKeju <= 5) {
+          // Create a new div element
+          var newFormDiv = $("<div>").addClass("mt-3");
+
+          // Add input fields and labels to the new div
+          newFormDiv.append(
+            `<input type="hidden"class="form-control lainlain${pisangKeju}" value="${nik}">
+              <label for="">Nama</label>
+              <input type="text" class="form-control lainlain${pisangKeju}" id="namaL">
+              <label for="">Nomor Telepon</label>
+              <input type="number" class="form-control lainlain${pisangKeju}" id="telpL">
+              <label for="">Hubungan</label>
+              <input type="text" class="form-control lainlain${pisangKeju}" id="hubL">`
+          );
+
+          // Append the new div to the anakForm container
+          $("#lainlain").append(newFormDiv);
+
+          // Increment the counter
+          pisangKeju++;
+        } else {
+          alert("Maximum limit of 5 forms reached.");
+        }
+      });
+
+      //
+    });
+    function submitForm() {
+      const lokalis = JSON.parse(localStorage.getItem("key"));
+      const nik = lokalis.data.nik;
+
+      var inputs = $('.form-control').map(function () {
+        return $(this).val();
+      }).get();
+
+      // Check if any of the inputs is empty
+      if (inputs.some(function (input) {
+        return input === '';
+      })) {
+        Swal.fire({
+          title: "Error!",
+          text: 'Isian anda ada yang kosong 🚫❗',
+          icon: "error",
+          confirmButtonText: "OK",
+        });
+        return;
+      }
+
+      var lok = [];
+      var lainlain1 = [];
+      var lainlain2 = [];
+      var lainlain3 = [];
+      var lainlain4 = [];
+      var lainlain5 = [];
+
+      for (var loh = 1; loh <= 5; loh++) {
+        var lainlain = $(`.lainlain${loh}`);
+
+        lainlain.each(function () {
+          if (loh === 2) {
+            lainlain2.push($(this).val());
+          } else if (loh === 1) {
+            lainlain1.push($(this).val());
+          } else if (loh === 3) {
+            lainlain3.push($(this).val());
+          } else if (loh === 4) {
+            lainlain4.push($(this).val());
+          } else if (loh === 5) {
+            lainlain5.push($(this).val());
+          }
+        });
+      }
+
+      // Memeriksa apakah setiap array tidak kosong sebelum push ke lok
+      if (lainlain1.length > 0) {
+        lok.push(lainlain1);
+      }
+      if (lainlain2.length > 0) {
+        lok.push(lainlain2);
+      }
+      if (lainlain3.length > 0) {
+        lok.push(lainlain3);
+      }
+      if (lainlain4.length > 0) {
+        lok.push(lainlain4);
+      }
+      if (lainlain5.length > 0) {
+        lok.push(lainlain5);
+      }
+      if (lok.length < 2) {
+        Swal.fire({
+          title: "Error!",
+          text: 'Minimal 2 Kontak Darurat',
+          icon: "error",
+          confirmButtonText: "OK",
+        });
+        return;
+      }
+      lok.forEach(function (innerArray) {
+        // Perform an AJAX request for each inner array
+        $.ajax({
+          url: "api/api_lain2.php",
+          method: "POST",
+          dataType: "json",
+          data: { values: innerArray }, // Pass the innerArray as data
+          success: function (response) {
+            // Handle the success response if needed
+            console.log(response);
+          },
+          error: function (xhr, status, error) {
+            // Handle errors if the Ajax request fails
+            console.error(xhr.responseText);
+          },
+        });
+      });
+      //
+      // }
+
+      var kisanak = [];
+      var anak1 = [];
+      var anak2 = [];
+      var anak3 = [];
+      var anak4 = [];
+      var anak5 = [];
+
+      // The logic from the kontol function
+      for (var i = 1; i <= 5; i++) {
+        var namaAnak = $(`.anak${i}`);
+
+        namaAnak.each(function () {
+          if (i === 2) {
+            anak2.push($(this).val());
+          } else if (i === 1) {
+            anak1.push($(this).val());
+          } else if (i === 3) {
+            anak3.push($(this).val());
+          } else if (i === 4) {
+            anak4.push($(this).val());
+          } else if (i === 5) {
+            anak5.push($(this).val());
+          }
+        });
+      }
+
+      if (anak1.length > 0) {
+        kisanak.push(anak1);
+      }
+      if (anak2.length > 0) {
+        kisanak.push(anak2);
+      }
+      if (anak3.length > 0) {
+        kisanak.push(anak3);
+      }
+      if (anak4.length > 0) {
+        kisanak.push(anak4);
+      }
+      if (anak5.length > 0) {
+        kisanak.push(anak5);
+      }
+      console.log(kisanak);
+      // Assuming kisanak is a two-dimensional array
+
+      // Iterate through the outer array (kisanak)
+      kisanak.forEach(function (innerArray) {
+        // Perform an AJAX request for each inner array
+        $.ajax({
+          url: "api/api_data_anak&saudara.php",
+          method: "POST",
+          dataType: "json",
+          data: { values: innerArray }, // Pass the innerArray as data
+          success: function (response) {
+            // Handle the success response if needed
+            console.log(response);
+          },
+          error: function (xhr, status, error) {
+            // Handle errors if the Ajax request fails
+            console.error(xhr.responseText);
+          },
+        });
+      });
+
+      var dulur = [];
+      var saudara1 = [];
+      var saudara2 = [];
+      var saudara3 = [];
+      var saudara4 = [];
+      var saudara5 = [];
+
+      // The logic from the lk function
+      for (var g = 1; g <= 5; g++) {
+        var namaAnak = $(`.saudara${g}`);
+
+        namaAnak.each(function () {
+          if (g === 2) {
+            saudara2.push($(this).val());
+          } else if (g === 1) {
+            saudara1.push($(this).val());
+          } else if (g === 3) {
+            saudara3.push($(this).val());
+          } else if (g === 4) {
+            saudara4.push($(this).val());
+          } else if (g === 5) {
+            saudara5.push($(this).val());
+          }
+        });
+      }
+
+      if (saudara1.length > 0) {
+        dulur.push(saudara1);
+      }
+      if (saudara2.length > 0) {
+        dulur.push(saudara2);
+      }
+      if (saudara3.length > 0) {
+        dulur.push(saudara3);
+      }
+      if (saudara4.length > 0) {
+        dulur.push(saudara4);
+      }
+      if (saudara5.length > 0) {
+        dulur.push(saudara5);
+      }
+      // console.log(dulur);
+      dulur.forEach(function (innerArray) {
+        // Perform an AJAX request for each inner array
+        $.ajax({
+          url: "api/api_data_anak&saudara.php",
+          method: "POST",
+          dataType: "json",
+          data: { values: innerArray }, // Pass the innerArray as data
+          success: function (response) {
+            // Handle the success response if needed
+            console.log(response);
+          },
+          error: function (xhr, status, error) {
+            // Handle errors if the Ajax request fails
+            console.error(xhr.responseText);
+          },
+        });
+      });
+      console.log(dulur);
+      //sekolah formal
+      var sekolah = [];
+      var formal1 = [];
+      var formal2 = [];
+      var formal3 = [];
+      var formal4 = [];
+      var formal5 = [];
+
+      for (var x = 1; x <= 5; x++) {
+        var formal = $(`.formal${x}`);
+
+        formal.each(function () {
+          if (x === 2) {
+            formal2.push($(this).val());
+          } else if (x === 1) {
+            formal1.push($(this).val());
+          } else if (x === 3) {
+            formal3.push($(this).val());
+          } else if (x === 4) {
+            formal4.push($(this).val());
+          } else if (x === 5) {
+            formal5.push($(this).val());
+          }
+        });
+      }
+
+      // end
+      if (formal1.length > 0) {
+        sekolah.push(formal1);
+      }
+      if (formal2.length > 0) {
+        sekolah.push(formal2);
+      }
+      if (formal3.length > 0) {
+        sekolah.push(formal3);
+      }
+      if (formal4.length > 0) {
+        sekolah.push(formal4);
+      }
+      if (formal5.length > 0) {
+        sekolah.push(formal5);
+      }
+      sekolah.forEach(function (innerArray) {
+        //Perform an AJAX request for each inner array
+        $.ajax({
+          url: "api/api_pendidikan.php",
+          method: "POST",
+          dataType: "json",
+          data: { values: innerArray }, // Pass the innerArray as data
+          success: function (response) {
+            // Handle the success response if needed
+            console.log(response);
+          },
+          error: function (xhr, status, error) {
+            // Handle errors if the Ajax request fails
+            console.error(xhr.responseText);
+          },
+        });
+      });
+      console.log(sekolah);
+
+      var hahaha = [];
+      var nonFormal1 = [];
+      var nonFormal2 = [];
+      var nonFormal3 = [];
+      var nonFormal4 = [];
+      var nonFormal5 = [];
+
+      for (var z = 1; z <= 5; z++) {
+        var nonFormal = $(`.non-formal${z}`);
+
+        nonFormal.each(function () {
+          if (z === 2) {
+            nonFormal2.push($(this).val());
+          } else if (z === 1) {
+            nonFormal1.push($(this).val());
+          } else if (z === 3) {
+            nonFormal3.push($(this).val());
+          } else if (z === 4) {
+            nonFormal4.push($(this).val());
+          } else if (z === 5) {
+            nonFormal5.push($(this).val());
+          }
+        });
+      }
+
+      if (nonFormal1.length > 0) {
+        hahaha.push(nonFormal1);
+      }
+      if (nonFormal2.length > 0) {
+        hahaha.push(nonFormal2);
+      }
+      if (nonFormal3.length > 0) {
+        hahaha.push(nonFormal3);
+      }
+      if (nonFormal4.length > 0) {
+        hahaha.push(nonFormal4);
+      }
+      if (nonFormal5.length > 0) {
+        hahaha.push(nonFormal5);
+      }
+      hahaha.forEach(function (innerArray) {
+        // Perform an AJAX request for each inner array
+        $.ajax({
+          url: "api/api_pendidikanNonformal.php",
+          method: "POST",
+          dataType: "json",
+          data: { values: innerArray }, // Pass the innerArray as data
+          success: function (response) {
+            // Handle the success response if needed
+            console.log(response);
+          },
+          error: function (xhr, status, error) {
+            // Handle errors if the Ajax request fails
+            console.error(xhr.responseText);
+          },
+        });
+      });
+      console.log(hahaha);
+
+      var leanguage = [];
+      var bahasa1 = [];
+      var bahasa2 = [];
+      var bahasa3 = [];
+      var bahasa4 = [];
+      var bahasa5 = [];
+      for (var y = 1; y <= 5; y++) {
+        var bahasas = $(`.bahasa${y}`);
+
+        bahasas.each(function () {
+          if (y === 2) {
+            bahasa2.push($(this).val());
+          } else if (y === 1) {
+            bahasa1.push($(this).val());
+          } else if (y === 3) {
+            bahasa3.push($(this).val());
+          } else if (y === 4) {
+            bahasa4.push($(this).val());
+          } else if (y === 5) {
+            bahasa5.push($(this).val());
+          }
+        });
+      }
+
+      if (bahasa1.length > 0) {
+        leanguage.push(bahasa1);
+      }
+      if (bahasa2.length > 0) {
+        leanguage.push(bahasa2);
+      }
+      if (bahasa3.length > 0) {
+        leanguage.push(bahasa3);
+      }
+      if (bahasa4.length > 0) {
+        leanguage.push(bahasa4);
+      }
+      if (bahasa5.length > 0) {
+        leanguage.push(bahasa5);
+      }
+      // console.log(leanguage);
+      leanguage.forEach(function (innerArray) {
+        // Perform an AJAX request for each inner array
+        $.ajax({
+          url: "api/api_bahasa.php",
+          method: "POST",
+          dataType: "json",
+          data: { values: innerArray }, // Pass the innerArray as data
+          success: function (response) {
+            // Handle the success response if needed
+            console.log(response);
+          },
+          error: function (xhr, status, error) {
+            // Handle errors if the Ajax request fails
+            console.error(xhr.responseText);
+          },
+        });
+      });
+      // console.log(leanguage[0[1]]);
+
+      var gosBas = [];
+      var organisasi1 = [];
+      var organisasi2 = [];
+      var organisasi3 = [];
+      var organisasi4 = [];
+      var organisasi5 = [];
+      for (var jawir = 1; jawir <= 5; jawir++) {
+        var organisasi = $(`.organisasi${jawir}`);
+
+        organisasi.each(function () {
+          if (jawir === 2) {
+            organisasi2.push($(this).val());
+          } else if (jawir === 1) {
+            organisasi1.push($(this).val());
+          } else if (jawir === 3) {
+            organisasi3.push($(this).val());
+          } else if (jawir === 4) {
+            organisasi4.push($(this).val());
+          } else if (jawir === 5) {
+            organisasi5.push($(this).val());
+          }
+        });
+      }
+
+      if (organisasi1.length > 0) {
+        gosBas.push(organisasi1);
+      }
+      if (organisasi2.length > 0) {
+        gosBas.push(organisasi2);
+      }
+      if (organisasi3.length > 0) {
+        gosBas.push(organisasi3);
+      }
+      if (organisasi4.length > 0) {
+        gosBas.push(organisasi4);
+      }
+      if (organisasi5.length > 0) {
+        gosBas.push(organisasi5);
+      }
+
+      gosBas.forEach(function (innerArray) {
+        // Perform an AJAX request for each inner array
+        $.ajax({
+          url: "api/api_organisasi.php",
+          method: "POST",
+          dataType: "json",
+          data: { values: innerArray }, // Pass the innerArray as data
+          success: function (response) {
+            // Handle the success response if needed
+            console.log(response);
+          },
+          error: function (xhr, status, error) {
+            // Handle errors if the Ajax request fails
+            console.error(xhr.responseText);
+          },
+        });
+      });
+      // console.log(gosBas);
+
+
+      // console.log(lok);
+
+      // Logic from the submitForm function
+
+      // // Perform the AJAX request
+      // var Kewarganegaraan = $("#Kewarganegaraan").val();
+
+      var nama_pasangan = $("#namaPasangan").val();
+      var jenisKPasangan = $("#jenisKPasangan").val();
+      var TglLahir_suamiistri = $("#tgllahirPasangan").val();
+      var tmptlahirPasangan = $("#tmptlahirPasangan").val();
+      var pendidikan_pasangan = $("#pendidikan_pasangan").val();
+      var pekerjaan_pasangan = $("#pekerjaan_pasangan").val();
+      var namaAyah = $("#namaAyah").val();
+      var jkAyah = $("#jkAyah").val();
+      var tgllahirAyah = $("#tgllahirAyah").val();
+      var tmptlahirAyah = $("#tmptlahirAyah").val();
+      var pendidikanayah = $("#pendidikanayah").val();
+      var pekerjaanayah = $("#pekerjaanayah").val();
+      var NamaIbu = $("#NamaIbu").val();
+      var jkIbu = $("#jkIbu").val();
+      var tgllahirIbu = $("#tgllahirIbu").val();
+      var tmptlahirIbu = $("#tmptlahirIbu").val();
+      var pendidikanIbu = $("#pendidikanIbu").val();
+      var namaPerusahaan = $("#namaPerusahaan").val();
+      var alamatPerusahaan = $("#alamatPerusahaan").val();
+      var telpPerusahaan = $("#telpPerusahaan").val();
+      var jbtnPerusahaan = $("#jbtnPerusahaan").val();
+      var telpAtasan = $("#telpAtasan").val();
+      var dariPerusahaan = $("#dariPerusahaan").val();
+      var sampaiPerusahaan = $("#sampaiPerusahaan").val();
+      var lastPerusahaan = $("#lastPerusahaan").val();
+      var alasan_keluar = $("#alasan_keluar").val();
+      var jobDesc = $("#jobDesc").val();
+      var kotaPerusahaan = $("#kotaPerusahaan").val();
+      var atasanPerusahaan = $("#atasanPerusahaan").val();
+      var relasi = $("#relasi").val();
+      var pnjlsn = $("#pnjlsn").val();
+      var pekerjaanIbu = $("#pekerjaanIbu").val();
+
+      var g = 0;
+      console.log(telpAtasan);
+      //pASANGAn
+      $.ajax({
+        url: 'api/api_kirim.php',
+        type: 'POST',
+        data: {
+          nik: parseInt(nik),
+          nama: nama_pasangan,
+          jk: jenisKPasangan,
+          tmptlahir: tmptlahirPasangan,
+          tgllahir: TglLahir_suamiistri,
+          pendidikan: pendidikan_pasangan,
+          pekerjaan: pekerjaan_pasangan,
+          status: 'Pasangan'
+        },
+        // contentType: 'application/json',
+        // dataType: 'JSON',
+        success: function (response) {
+          console.log(response)
+        },
+        error: function (error) {
+          console.error('Error:', error);
+        }
+      });
+      // ayah
+      $.ajax({
+        url: 'api/api_kirim.php',
+        type: 'POST',
+        data: {
+          nik: nik,
+          nama: namaAyah,
+          jk: jkAyah,
+          tgllahir: tgllahirAyah,
+          tmptlahir: tmptlahirAyah,
+          pendidikan: pendidikanayah,
+          pekerjaan: pekerjaanayah,
+          status: 'Ayah'
+        },
+        // contentType: 'application/json',
+        // dataType: 'JSON',
+        success: function (response) {
+          console.log(response)
+        },
+        error: function (error) {
+          console.error('Error:', error);
+        }
+      });
+
+      //ibu
+      $.ajax({
+        url: 'api/api_kirim.php',
+        type: 'POST',
+        data: {
+          nik: nik,
+          nama: NamaIbu,
+          jk: jkIbu,
+          tgllahir: tgllahirIbu,
+          tmptlahir: tmptlahirIbu,
+          pendidikan: pendidikanIbu,
+          pekerjaan: pekerjaanIbu,
+          status: 'Ibu'
+        },
+        // contentType: 'application/json',
+        // dataType: 'JSON',
+        success: function (response) {
+          console.log(response)
+        },
+        error: function (error) {
+          console.error('Error:', error);
+        }
+      });
+      //pengalaman kerja
+      $.ajax({
+        url: 'api/api_pengalaman_kerja.php',
+        type: 'POST',
+        data: {
+          nik: nik,
+          namaPerusahaan: namaPerusahaan,
+          alamatPerusahaan: alamatPerusahaan,
+          kotaPerusahaan: kotaPerusahaan,
+          telpPerusahaan: telpPerusahaan,
+          jbtnPerusahaan: jbtnPerusahaan,
+          atasanPerusahaan: atasanPerusahaan,
+          telpAtasan: telpAtasan,
+          dariPerusahaan: dariPerusahaan,
+          selesai_kerja: sampaiPerusahaan,
+          gaji_terakhir: lastPerusahaan,
+          alasan_keluar: alasan_keluar,
+          deskripsi_pekerjaan: jobDesc,
+          pnjlsn: pnjlsn,
+
+        },
+        // contentType: 'application/json',
+        // dataType: 'JSON',
+        success: function (response) {
+          Swal.fire({
+            title: "Success!",
+            text: response.message,
+            icon: "success",
+          });
+        },
+        error: function (error) {
+          console.error('Error:', error);
+        }
+      });
+    }
+
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script>
+    //   $("#btn5").click(function () {
+    //   if (UlatBom < 5) {
+    //     // Get input values
+    //     var bahasaValue = $("#bahasaInput").val();
+    //     var writingValue = $("#writingSelect").val();
+    //     var understandingValue = $("#understandingSelect").val();
+    //     var speakingValue = $("#speakingSelect").val();
+    //     var readingValue = $("#readingSelect").val();
+    //   }
+    // });
+    // localStorage.clear();
+
+
+  </script>
+</body>
+
+</html>
